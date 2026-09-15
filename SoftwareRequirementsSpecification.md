@@ -205,8 +205,7 @@ The **Hospital Representative** authenticates via a verified institutional accou
 
 ### Figure 7.1 — Use-Case Diagram: Donor and Hospital Portal Workflows
 
-![Figure 7.1 — Use-Case Diagram](./images/figure-7.1-use-case-donor-hospital.png)
-
+![Use-Case Diagram — Donor and Hospital Portal Workflows](./images/donorhospital.png)
 ---
 
 ## 7.2 Use-Case Diagram — Blood Bank Staff & Administrator Workflows
@@ -232,8 +231,7 @@ The **System Administrator** can:
 
 ### Figure 7.2 — Use-Case Diagram: Blood Bank Staff & Administrator Workflows
 
-![Figure 7.2 — Use-Case Diagram](./images/figure-7.2-use-case-staff-admin.png)
-
+![Use-Case Diagram — Blood Bank Staff & Administrator Workflows](./images/staffadmin.png)
 ---
 
 # 8. Requirements Traceability Matrix (RTM)
