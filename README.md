@@ -39,3 +39,35 @@
 
 ---
 
+# 1. Introduction
+
+## 1.1 Purpose
+This document is a Software Requirements Specification (SRS) for the Blood Bank Management System (BBMS), an enterprise-grade, role-based full-stack web application developed using Node.js, Express, SQLite, and Tailwind CSS. It defines the functional and non-functional requirements, external interfaces, security objectives and controls, system architectural models, and the verification criteria against which the delivered system will be assessed. The intended readers are the developer team (Team T9), reviewing faculty instructor, course coordinator, and laboratory evaluators.
+
+## 1.2 Scope
+The Blood Bank Management System encompasses the end-to-end operational lifecycle of voluntary blood donation, blood unit testing and processing, inventory management, hospital blood requisition, and emergency dispatch. The system provides role-based web portals for Donors, Hospital Representatives, Blood Bank Staff, and System Administrators.
+
+Key in-scope subsystems include: donor pre-screening health questionnaires, appointment scheduling, digital donor cards, blood unit collection tracking with unique Bag IDs, mandatory serological infection screening (HIV, Hepatitis B/C, Syphilis, Malaria), component separation (PRBC, Platelets, Fresh Frozen Plasma), First-Expired-First-Out (FEFO) stock monitoring, hospital requisition submission with clinical urgency prioritization, automated ABO/Rh cross-matching verification, cold-chain dispatch handover manifests, immutable audit logging, and a public availability dashboard.
+
+Explicitly out of scope: Direct hardware automation of centrifuges/refrigeration IoT sensors, online monetary payment gateways (blood is donated voluntarily without commercial sale), and direct clinical transfusion administration inside operating theaters.
+
+## 1.3 Audience
+Developer Team (Team T9), Software Quality Assurance / Test Engineers, Course Instructors, Academic Evaluators, and Hospital Blood Transfusion Committees.
+
+## 1.4 Definitions and Acronyms
+
+| Term | Meaning |
+| :--- | :--- |
+| **BBMS** | Blood Bank Management System — integrated web platform for blood lifecycle tracking. |
+| **RBAC** | Role-Based Access Control — security architecture restricting access based on user role. |
+| **PRBC** | Packed Red Blood Cells — red cell component used to treat acute hemorrhage and severe anemia. |
+| **FFP** | Fresh Frozen Plasma — plasma frozen within 8 hours, containing labile coagulation factors. |
+| **Platelet Concentrate** | Thrombocytes harvested to prevent bleeding in thrombocytopenic patients (5-day shelf life). |
+| **Serology Screening** | Laboratory diagnostic assays for transfusion-transmissible infections (TTIs). |
+| **Quarantine** | Holding status isolating blood units pending test results or discarding non-conforming units. |
+| **Cross-Matching** | Compatibility testing between donor erythrocytes and recipient serum prior to issue. |
+| **FEFO** | First-Expired-First-Out — inventory distribution strategy prioritizing closest expiration date. |
+| **RTM** | Requirements Traceability Matrix — mapping requirements to modules, test cases, and status. |
+
+---
+
