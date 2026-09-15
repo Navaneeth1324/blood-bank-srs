@@ -111,3 +111,31 @@ The Blood Bank Management System operates as a centralized, self-contained clien
 
 ---
 
+# 3. External interface requirements
+
+## 3.1 User interfaces
+The web interface is engineered with responsive, accessible Tailwind CSS components. Key screens include:
+- **Public Landing & Availability Portal:** Real-time stock summary, donor educational guidelines, and blood camp schedules.
+- **Donor Portal:** Clean health questionnaire, appointment selector with time-slot reservation, and printable digital donor card.
+- **Staff Operations Dashboard:** Rapid unit logging with Bag ID scanner support, serology results checklist, and quarantine status toggles.
+- **Hospital Order Portal:** Structured requisition form with blood group selectors, unit counts, priority indicators, and delivery tracking.
+- **Admin Control Center:** Interactive stock analytics, user role administration, and immutable audit trail tables.
+
+## 3.2 Hardware Interfaces
+- **Client Workstation / Mobile Device:** Minimum 1024x768 resolution for staff dashboard; responsive down to 360px width for donor portal.
+- **Barcode / QR Scanner:** Optional standard USB/Bluetooth HID keyboard emulation for rapid Bag ID and Donor Card scanning.
+- **Host Server:** Standard computing hardware (minimum 1 vCPU, 1 GB RAM, 10 GB storage).
+
+## 3.3 Software Interfaces
+- **Operating System:** macOS, Linux (Debian/Ubuntu/CentOS), or Windows 10/11.
+- **Runtime Environment:** Node.js (v18.x or v20.x LTS).
+- **Database Engine:** SQLite3 embedded database engine.
+- **Tunnel / Proxy:** Cloudflare Tunnel daemon / Nginx for reverse proxying and automated SSL/TLS termination.
+
+## 3.4 Communications Interfaces
+RESTful JSON APIs over HTTP/HTTPS. Stateful session management via HTTP-only, SameSite secure cookies and JWT tokens. Standard CORS policies configured to prevent unauthorized cross-origin requests.
+
+---
+
+# 4. System features (Overview)
+Detailed functional specifications (BBMS-F-001 through BBMS-F-025), non-functional requirements (BBMS-NF-001 through BBMS-NF-005), security controls (BBMS-SR-001 through BBMS-SR-006), UML diagrams, and the Requirements Traceability Matrix are elaborated in the complete 9-page system deliverable.
