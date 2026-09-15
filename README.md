@@ -71,3 +71,43 @@ Developer Team (Team T9), Software Quality Assurance / Test Engineers, Course In
 
 ---
 
+# 2. Overall description
+
+## 2.1 Product perspective
+The Blood Bank Management System operates as a centralized, self-contained client-server web application. The backend is powered by Node.js and Express RESTful services backed by an ACID-compliant SQLite relational database running in Write-Ahead Logging (WAL) mode for high concurrent read throughput. The frontend utilizes responsive semantic HTML5, vanilla modern JavaScript (ES6+), and Tailwind CSS for mobile-friendly UI rendering. The application is completely containerizable and can run locally or behind reverse proxies (Nginx, Cloudflare Tunnels) for secure HTTPS access.
+
+## 2.2 Major product functions
+- Donor registration, medical eligibility self-screening, and digital donor card generation.
+- Blood donation appointment booking and blood drive camp scheduling.
+- Blood collection logging with unique barcode-compatible Bag IDs and donor linkage.
+- Laboratory serology testing entry with automated quarantine enforcement for reactive units.
+- Blood component separation tracking (PRBC, Platelets, FFP) with distinct temperature and shelf lives.
+- Real-time blood stock inventory management categorized by 8 blood groups and component types.
+- First-Expired-First-Out (FEFO) inventory allocation and proactive expiration threshold alerts.
+- Hospital blood requisition workflow supporting Emergency/STAT and routine priority queues.
+- Automated ABO/Rh compatibility cross-matching engine.
+- Cryptographically signed dispatch manifests and chain-of-custody delivery verification.
+- Immutable system audit logging and regulatory compliance reporting.
+
+## 2.3 User roles and characteristics
+- **Public Donor** — Voluntary blood donor. Expects intuitive self-service portal, eligibility guidance, simple appointment booking, and instant access to digital donor cards.
+- **Hospital Representative** — Authorized hospital physician or blood bank coordinator. Submits urgent blood requisitions, tracks fulfillment status, and confirms custody transfer.
+- **Blood Bank Staff / Lab Technician** — Laboratory professional logging blood collections, recording infectious disease screening assays, separating components, and managing stock allocations.
+- **System Administrator** — IT/Operations lead managing user roles, configuring blood bank parameters, inspecting audit trails, and generating regulatory compliance reports.
+- **Course Evaluator / Inspector** — Academic evaluator reviewing source code modularity, test coverage, relational schemas, and adherence to Software Engineering standards.
+
+## 2.4 Operating environment
+- **Server:** Node.js 18+ runtime on macOS (Apple Silicon / Intel), Linux (Ubuntu 22.04 LTS), or Windows 10/11 Server.
+- **Database:** SQLite 3.x embedded database with WAL mode enabled; zero external database daemon required.
+- **Client:** Modern evergreen web browsers (Chrome 100+, Safari 15+, Firefox 100+, Edge 100+) on desktop, tablet, and mobile devices.
+- **Network:** Standard HTTP/1.1 and HTTP/2 over TCP ports 3000 / 443 with TLS encryption.
+
+## 2.5 Constraints and assumptions
+- Standards compliance: Clean architectural separation between REST controllers, business service logic, and database access models.
+- Relational integrity: Foreign keys strictly enforced across all database tables (donors, units, requests, logs).
+- Safe dispensing: The system strictly blocks allocation of expired, un-tested, or serologically reactive blood units.
+- Physical pre-condition: Clinical vitals (hemoglobin ≥ 12.5 g/dL, blood pressure, weight ≥ 45 kg) are verified by physical nursing staff at collection.
+- Regulatory compliance: Complete audit logging of all inventory changes to fulfill National Blood Transfusion Council guidelines.
+
+---
+
